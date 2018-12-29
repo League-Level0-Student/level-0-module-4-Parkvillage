@@ -10,10 +10,18 @@ public class SimpleCalculator {
 	
 	}
 
-	public static void subtraction(int n1, int n2) {
-		JOptionPane.showMessageDialog(null, n1+"-"+n2+"="+(n1+n2));
+	public static int subtraction(int n1, int n2) {
+		return n1-n2;
 	}
-	
+	public static int multiplication(int n1, int n2) {
+		
+		return n1*n2;
+	}
+	public static int divison(int n1,int n2) {
+		
+		
+		return n1/n2;
+	}
 	public static void main(String[] args) {
 
 		// 1. Get 2 numbers from the user and convert them to integer.
@@ -33,10 +41,19 @@ public class SimpleCalculator {
 		}
 		
 		else if(operation==1) {
-			JOptionPane
+		int b= subtraction(Integer.parseInt(num1),Integer.parseInt(num2));
+		JOptionPane.showMessageDialog(null, b);
 		}
+		else if(operation==2) {
+			int c= multiplication(Integer.parseInt(num1),Integer.parseInt(num2));
+			JOptionPane.showMessageDialog(null, c);
+			}
+		else if(operation==3) {
+			int d= divison(Integer.parseInt(num1),Integer.parseInt(num2));
+			JOptionPane.showMessageDialog(null, d);
+			}
 		}
-			subtraction(Integer.parseInt(num1),Integer.parseInt(num2));
+			
 	}
 
 
@@ -44,4 +61,3 @@ public class SimpleCalculator {
 	//    Method should create pop-up that shows equation and solution, eg. 45 + 25 = 70.
 	//    HINT: use 'static void add(int num1, num2) { ... }
 
-}
